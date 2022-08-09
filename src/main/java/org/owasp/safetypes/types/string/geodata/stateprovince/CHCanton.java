@@ -5,9 +5,9 @@ import org.owasp.safetypes.types.string.AbstractSafeEnumStringIgnoreCase;
 
 import java.util.Set;
 
-public class SwissCantons extends AbstractSafeEnumStringIgnoreCase {
+public class CHCanton extends AbstractSafeEnumStringIgnoreCase {
 
-    protected SwissCantons(String value) throws TypeValidationException {
+    protected CHCanton(String value) throws TypeValidationException {
         super(value);
     }
 

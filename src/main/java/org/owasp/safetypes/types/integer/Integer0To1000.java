@@ -2,13 +2,13 @@ package org.owasp.safetypes.types.integer;
 
 import org.owasp.safetypes.exception.TypeValidationException;
 
-public class Integer0_1000 extends AbstractSafeLimitedInteger {
+public class Integer0To1000 extends AbstractSafeLimitedInteger {
 
-    public Integer0_1000(Integer value) throws TypeValidationException {
+    public Integer0To1000(Integer value) throws TypeValidationException {
         super(value);
     }
 
-    public Integer0_1000(String value) throws TypeValidationException {
+    public Integer0To1000(String value) throws TypeValidationException {
         super(Integer.parseInt(value));
     }
 

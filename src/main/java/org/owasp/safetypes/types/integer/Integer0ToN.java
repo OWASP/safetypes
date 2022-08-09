@@ -2,19 +2,19 @@ package org.owasp.safetypes.types.integer;
 
 import org.owasp.safetypes.exception.TypeValidationException;
 
-public class Integer1_N extends AbstractSafeLimitedInteger {
+public class Integer0ToN extends AbstractSafeLimitedInteger {
 
-    public Integer1_N(Integer value) throws TypeValidationException {
+    public Integer0ToN(Integer value) throws TypeValidationException {
         super(value);
     }
 
-    public Integer1_N(String value) throws TypeValidationException {
+    public Integer0ToN(String value) throws TypeValidationException {
         super(Integer.parseInt(value));
     }
 
     @Override
     protected final Integer low() {
-        return 1;
+        return 0;
     }
 
     @Override

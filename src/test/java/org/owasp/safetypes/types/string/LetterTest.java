@@ -17,6 +17,5 @@ class LetterTest {
         assertThrows(TypeValidationException.class, () -> new Letter("_"));
         assertThrows(TypeValidationException.class, () -> new Letter("'"));
         assertThrows(TypeValidationException.class, () -> new Letter("-"));
-        assertThrows(TypeValidationException.class, () -> new Letter("-"));
     }
 }

@@ -5,9 +5,9 @@ import org.owasp.safetypes.types.string.AbstractSafeEnumStringIgnoreCase;
 
 import java.util.Set;
 
-public class CanadaProvinces extends AbstractSafeEnumStringIgnoreCase {
+public class CAProvince extends AbstractSafeEnumStringIgnoreCase {
 
-    protected CanadaProvinces(String value) throws TypeValidationException {
+    protected CAProvince(String value) throws TypeValidationException {
         super(value);
     }
 
