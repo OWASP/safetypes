@@ -12,6 +12,8 @@ class Integer0ToNTest {
         assertDoesNotThrow(() -> new Integer0ToN(0));
         assertDoesNotThrow(() -> new Integer0ToN(123456));
         assertDoesNotThrow(() -> new Integer0ToN("123456"));
+        assertDoesNotThrow(() -> new Integer0ToN((Integer) null));
+        assertDoesNotThrow(() -> new Integer0ToN((String) null));
         assertThrows(TypeValidationException.class, () -> new Integer0ToN(-1));
         assertThrows(TypeValidationException.class, () -> new Integer0ToN("-1"));
     }

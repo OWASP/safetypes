@@ -12,6 +12,8 @@ class DigitTest {
         assertDoesNotThrow(() -> new Digit(0));
         assertDoesNotThrow(() -> new Digit(9));
         assertDoesNotThrow(() -> new Digit("9"));
+        assertDoesNotThrow(() -> new Digit((Integer) null));
+        assertDoesNotThrow(() -> new Digit((String) null));
         assertThrows(TypeValidationException.class, () -> new Digit(10));
         assertThrows(TypeValidationException.class, () -> new Digit(-1));
         assertThrows(TypeValidationException.class, () -> new Digit("10"));

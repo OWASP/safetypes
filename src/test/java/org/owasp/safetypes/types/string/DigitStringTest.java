@@ -11,6 +11,7 @@ class DigitStringTest {
     void accept() {
         assertDoesNotThrow(() -> new DigitString("0"));
         assertDoesNotThrow(() -> new DigitString("9"));
+        assertDoesNotThrow(() -> new DigitString(null));
         assertThrows(TypeValidationException.class, () -> new DigitString("10"));
         assertThrows(TypeValidationException.class, () -> new DigitString("-1"));
     }

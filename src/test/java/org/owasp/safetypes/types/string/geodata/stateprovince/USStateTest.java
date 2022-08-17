@@ -11,6 +11,8 @@ class USStateTest {
     void accept() {
         assertDoesNotThrow(() -> new USState("GA"));
         assertDoesNotThrow(() -> new USState("MI"));
+        assertDoesNotThrow(() -> new USState("mi"));
+        assertDoesNotThrow(() -> new USState(null));
         assertThrows(TypeValidationException.class, () -> new USState("XY"));
         assertThrows(TypeValidationException.class, () -> new USState(" "));
         assertThrows(TypeValidationException.class, () -> new USState(">"));

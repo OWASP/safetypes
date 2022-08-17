@@ -12,6 +12,7 @@ class NumStringTest {
     void accept() {
         assertDoesNotThrow(() -> new NumString("123"));
         assertDoesNotThrow(() -> new NumString("007"));
+        assertDoesNotThrow(() -> new NumString(null));
         assertThrows(TypeValidationException.class, () -> new NumString("W"));
         assertThrows(TypeValidationException.class, () -> new NumString(" "));
         assertThrows(TypeValidationException.class, () -> new NumString(">"));

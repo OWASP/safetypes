@@ -11,6 +11,7 @@ class CountryTest {
     void accept() {
         assertDoesNotThrow(() -> new Country("BG"));
         assertDoesNotThrow(() -> new Country("BGR"));
+        assertDoesNotThrow(() -> new Country("bgr"));
         assertThrows(TypeValidationException.class, () -> new Country("BGX"));
         assertThrows(TypeValidationException.class, () -> new Country("BX"));
         assertThrows(TypeValidationException.class, () -> new Country("XY"));

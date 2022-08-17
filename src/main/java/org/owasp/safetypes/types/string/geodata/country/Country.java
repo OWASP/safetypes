@@ -1,18 +1,49 @@
 package org.owasp.safetypes.types.string.geodata.country;
 
 import org.owasp.safetypes.exception.TypeValidationException;
-import org.owasp.safetypes.types.string.AbstractSafeEnumStringIgnoreCase;
+import org.owasp.safetypes.types.string.AbstractSafeSetStringIgnoreCase;
 
 import java.util.Set;
 
-public class Country extends AbstractSafeEnumStringIgnoreCase {
+/**
+ * The {@code Country} class represents a special type of
+ * {@code String} containing a country code.
+ * <p>
+ * Example:
+ * <pre><code>
+ *     //Spring REST example
+ *     import org.owasp.safetypes.types.string.geodata.country.Country;
+ *     ...
+ *     &#64;GetMapping("/country")
+ *     public ResponseEntity&lt;String&gt; country(@RequestParam Country country) {
+ *         return new ResponseEntity&lt;&gt;(country.get(), HttpStatus.OK);
+ *     }
+ *     ...
+ * </code></pre>
+ * <p>
+ *
+ * @author todorolev
+ */
+public class Country extends AbstractSafeSetStringIgnoreCase {
 
-    protected Country(String value) throws TypeValidationException {
+    /**
+     * Initializes a newly created {@code Country} object so that it
+     * represents the same value as the argument.
+     *
+     * @param value A {@code String}.
+     * @throws TypeValidationException if the validation fails.
+     */
+    public Country(String value) throws TypeValidationException {
         super(value);
     }
 
+    /**
+     * Returns a {@code Set} of all country codes.
+     *
+     * @return the {@code Set} of all country codes
+     */
     @Override
-    protected Set<String> setStrings() {
+    protected Set<String> strings() {
         return Set.of( "AF", "AFG", "AL", "ALB", "DZ", "DZA", "AS", "ASM", "AD", "AND", "AO", "AGO", "AI", "AIA", "AQ",
                 "ATA", "AG", "ATG", "AR", "ARG", "AM", "ARM", "AW", "ABW", "AU", "AUS", "AT", "AUT", "AZ", "AZE", "BS",
                 "BHS", "BH", "BHR", "BD", "BGD", "BB", "BRB", "BY", "BLR", "BE", "BEL", "BZ", "BLZ", "BJ", "BEN", "BM",

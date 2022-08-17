@@ -13,6 +13,7 @@ class UUIDStringTest {
         assertDoesNotThrow(() -> new UUIDString("5C87E45E-1327-11ED-861D-0242AC120002"));
         assertDoesNotThrow(() -> new UUIDString("8d44be53-4689-4d30-9c48-d2e5f68acfc6"));
         assertDoesNotThrow(() -> new UUIDString("8D44BE53-4689-4D30-9C48-D2E5F68ACFC6"));
+        assertDoesNotThrow(() -> new UUIDString(null));
         assertThrows(TypeValidationException.class, () -> new UUIDString("W"));
         assertThrows(TypeValidationException.class, () -> new UUIDString(" "));
         assertThrows(TypeValidationException.class, () -> new UUIDString("w-o-r-d"));

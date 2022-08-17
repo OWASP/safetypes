@@ -11,6 +11,7 @@ class LetterTest {
     @Test
     void accept() {
         assertDoesNotThrow(() -> new Letter("W"));
+        assertDoesNotThrow(() -> new Letter(null));
         assertThrows(TypeValidationException.class, () -> new Letter("Wo"));
         assertThrows(TypeValidationException.class, () -> new Letter(" "));
         assertThrows(TypeValidationException.class, () -> new Letter(">"));

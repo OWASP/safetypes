@@ -1,18 +1,49 @@
 package org.owasp.safetypes.types.string.language;
 
 import org.owasp.safetypes.exception.TypeValidationException;
-import org.owasp.safetypes.types.string.AbstractSafeEnumStringIgnoreCase;
+import org.owasp.safetypes.types.string.AbstractSafeSetStringIgnoreCase;
 
 import java.util.Set;
 
-public class Language extends AbstractSafeEnumStringIgnoreCase {
+/**
+ * The {@code Language} class represents a special type of
+ * {@code String} containing a language code.
+ * <p>
+ * Example:
+ * <pre><code>
+ *     //Spring REST example
+ *     import org.owasp.safetypes.types.string.language.Language;
+ *     ...
+ *     &#64;GetMapping("/language")
+ *     public ResponseEntity&lt;String&gt; language(@RequestParam Language language) {
+ *         return new ResponseEntity&lt;&gt;(language.get(), HttpStatus.OK);
+ *     }
+ *     ...
+ * </code></pre>
+ * <p>
+ *
+ * @author todorolev
+ */
+public class Language extends AbstractSafeSetStringIgnoreCase {
 
-    protected Language(String value) throws TypeValidationException {
+    /**
+     * Initializes a newly created {@code Language} object so that
+     * it represents the same value as the argument.
+     *
+     * @param value A {@code String}.
+     * @throws TypeValidationException if the validation fails.
+     */
+    public Language(String value) throws TypeValidationException {
         super(value);
     }
 
+    /**
+     * Returns a {@code Set} of all language codes.
+     *
+     * @return the {@code Set} of all language codes.
+     */
     @Override
-    protected Set<String> setStrings() {
+    protected Set<String> strings() {
         return Set.of("aa", "ab", "af", "am", "ar", "as", "ay", "az", "ba", "be", "bg", "bh", "bi", "bn", "bo", "br",
                 "ca", "co", "cs", "cy", "da", "de", "dz", "el", "en", "eo", "es", "et", "eu", "fa", "fi", "fj", "fo",
                 "fr", "fy", "ga", "gd", "gl", "gn", "gu", "ha", "hi", "he", "hr", "hu", "hy", "ia", "id", "ie", "ik",

@@ -14,6 +14,8 @@ class Integer0To1000Test {
         assertDoesNotThrow(() -> new Integer0To1000(123));
         assertDoesNotThrow(() -> new Integer0To1000(1000));
         assertDoesNotThrow(() -> new Integer0To1000("123"));
+        assertDoesNotThrow(() -> new Integer0To1000((Integer) null));
+        assertDoesNotThrow(() -> new Integer0To1000((String) null));
         assertThrows(TypeValidationException.class, () -> new Integer0To1000(-1));
         assertThrows(TypeValidationException.class, () -> new Integer0To1000(1001));
         assertThrows(TypeValidationException.class, () -> new Integer0To1000("1001"));

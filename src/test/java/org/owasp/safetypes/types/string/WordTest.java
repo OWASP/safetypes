@@ -11,6 +11,7 @@ class WordTest {
     @Test
     void accept() {
         assertDoesNotThrow(() -> new Word("Word"));
+        assertDoesNotThrow(() -> new Word(null));
         assertThrows(TypeValidationException.class, () -> new Word("Wor d"));
         assertThrows(TypeValidationException.class, () -> new Word("Word1"));
         assertThrows(TypeValidationException.class, () -> new Word("W'ord"));

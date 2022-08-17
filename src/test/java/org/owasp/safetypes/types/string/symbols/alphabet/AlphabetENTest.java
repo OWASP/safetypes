@@ -10,6 +10,7 @@ class AlphabetENTest {
     @Test
     void accept() {
         assertDoesNotThrow(() -> new English("W"));
+        assertDoesNotThrow(() -> new English(null));
         assertThrows(TypeValidationException.class, () -> new English("Wo"));
         assertThrows(TypeValidationException.class, () -> new English(" "));
         assertThrows(TypeValidationException.class, () -> new English(">"));
