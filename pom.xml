@@ -6,11 +6,11 @@
 
     <groupId>org.owasp.safetypes</groupId>
     <artifactId>safetypes-java</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>0.1.0-SNAPSHOT</version>
 
-    <name>OWASP Java safetypes Project</name>
+    <name>OWASP Java Safetypes Project</name>
     <description>
-        The OWASP Java safetypes package is a collection of classes which can substitute their
+        The OWASP Java safetypes library is a collection of classes which can substitute their
         conventional alternatives in Java and which aid input validation on deserialization level,
         when used in a REST API implementation.
     </description>
@@ -59,7 +59,7 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
-            <version>5.8.2</version>
+            <version>5.9.0</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
