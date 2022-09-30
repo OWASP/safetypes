@@ -47,7 +47,7 @@ public class Integer0To100 extends AbstractSafeLimitedInteger {
      * @throws TypeValidationException if the validation fails.
      */
     public Integer0To100(String value) throws TypeValidationException {
-        super(Integer.parseInt(value));
+        super(value == null ? null : Integer.parseInt(value));
     }
 
     /**

@@ -42,7 +42,7 @@ public class Integer1ToN extends AbstractSafeLimitedInteger {
      * @throws TypeValidationException if the validation fails.
      */
     public Integer1ToN(String value) throws TypeValidationException {
-        super(Integer.parseInt(value));
+        super(value == null ? null : Integer.parseInt(value));
     }
 
     /**
