@@ -1,4 +1,4 @@
-package org.owasp.safetypes.types.string;
+package org.owasp.safetypes.types.string.numbers;
 
 import org.junit.jupiter.api.Test;
 import org.owasp.safetypes.exception.TypeValidationException;

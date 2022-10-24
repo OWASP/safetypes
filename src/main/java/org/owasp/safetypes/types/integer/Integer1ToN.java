@@ -51,7 +51,7 @@ public class Integer1ToN extends AbstractSafeLimitedInteger {
      * @return 1.
      */
     @Override
-    protected final Integer low() {
+    protected final Integer min() {
         return 1;
     }
 
@@ -61,7 +61,7 @@ public class Integer1ToN extends AbstractSafeLimitedInteger {
      * @return null.
      */
     @Override
-    protected final Integer high() {
+    protected final Integer max() {
         return null;
     }
 }

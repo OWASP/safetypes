@@ -56,7 +56,7 @@ public class Integer0To1000 extends AbstractSafeLimitedInteger {
      * @return 0.
      */
     @Override
-    protected final Integer low() {
+    protected final Integer min() {
         return 0;
     }
 
@@ -66,7 +66,7 @@ public class Integer0To1000 extends AbstractSafeLimitedInteger {
      * @return 1000.
      */
     @Override
-    protected final Integer high() {
+    protected final Integer max() {
         return 1000;
     }
 }

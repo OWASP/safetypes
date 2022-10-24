@@ -52,7 +52,7 @@ public class Integer0ToN extends AbstractSafeLimitedInteger {
      * @return 0.
      */
     @Override
-    protected final Integer low() {
+    protected final Integer min() {
         return 0;
     }
 
@@ -62,7 +62,7 @@ public class Integer0ToN extends AbstractSafeLimitedInteger {
      * @return null.
      */
     @Override
-    protected final Integer high() {
+    protected final Integer max() {
         return null;
     }
 }
