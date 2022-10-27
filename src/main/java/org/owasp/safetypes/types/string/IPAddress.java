@@ -39,7 +39,7 @@ public class IPAddress extends AbstractSafeDataType<String> {
      * @param value A {@code String}.
      * @throws TypeValidationException if the validation fails.
      */
-    protected IPAddress(String value) throws TypeValidationException {
+    public IPAddress(String value) throws TypeValidationException {
         super(value);
     }
 

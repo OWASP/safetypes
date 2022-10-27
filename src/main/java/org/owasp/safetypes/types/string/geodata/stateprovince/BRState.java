@@ -33,7 +33,7 @@ public class BRState extends AbstractSafeSetStringIgnoreCase {
      * @param value A {@code String}.
      * @throws TypeValidationException if the validation fails.
      */
-    protected BRState(String value) throws TypeValidationException {
+    public BRState(String value) throws TypeValidationException {
         super(value);
     }
 

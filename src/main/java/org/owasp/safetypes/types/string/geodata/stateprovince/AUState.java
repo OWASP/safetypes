@@ -33,7 +33,7 @@ public class AUState extends AbstractSafeSetStringIgnoreCase {
      * @param value A {@code String}.
      * @throws TypeValidationException if the validation fails.
      */
-    protected AUState(String value) throws TypeValidationException {
+    public AUState(String value) throws TypeValidationException {
         super(value);
     }
 

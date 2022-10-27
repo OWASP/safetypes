@@ -34,7 +34,7 @@ public class Word0To50 extends AbstractSafeWord {
      * @param value A {@code String}.
      * @throws TypeValidationException if the validation fails.
      */
-    protected Word0To50(String value) throws TypeValidationException {
+    public Word0To50(String value) throws TypeValidationException {
         super(value);
     }
 

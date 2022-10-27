@@ -35,7 +35,7 @@ public class MYState extends AbstractSafeSetStringIgnoreCase {
      * @param value A {@code String}.
      * @throws TypeValidationException if the validation fails.
      */
-    protected MYState(String value) throws TypeValidationException {
+    public MYState(String value) throws TypeValidationException {
         super(value);
     }
 
