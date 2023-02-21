@@ -21,7 +21,7 @@ import org.owasp.safetypes.exception.TypeValidationException;
  *
  * @author todorolev
  */
-public class Digit extends AbstractSafeLimitedInteger {
+public class Digit extends LimitedInteger {
 
     /**
      * Initializes a newly created {@code Digit} object so that it
@@ -56,7 +56,7 @@ public class Digit extends AbstractSafeLimitedInteger {
      * @return 0.
      */
     @Override
-    protected final Integer low() {
+    protected final Integer min() {
         return 0;
     }
 
@@ -66,7 +66,7 @@ public class Digit extends AbstractSafeLimitedInteger {
      * @return 9.
      */
     @Override
-    protected final Integer high() {
+    protected final Integer max() {
         return 9;
     }
 }

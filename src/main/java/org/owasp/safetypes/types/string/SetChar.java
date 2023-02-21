@@ -1,12 +1,12 @@
 package org.owasp.safetypes.types.string;
 
-import org.owasp.safetypes.AbstractSafeDataType;
+import org.owasp.safetypes.SafeType;
 import org.owasp.safetypes.exception.TypeValidationException;
 
 import java.util.Set;
 
 /**
- * The {@code AbstractSafeSetChar} class represents a special
+ * The {@code SetChar} class represents a special
  * type of {@code String}, which contains a single character,
  * e.g. "a", "A", "X", etc., restricted to the values in the
  * {@code Set}, returned by the {@code chars()} method.
@@ -19,10 +19,10 @@ import java.util.Set;
  *
  * @author todorolev
  */
-public abstract class AbstractSafeSetChar extends AbstractSafeDataType<String> {
+public abstract class SetChar extends SafeType<String> {
 
     /**
-     * Initializes a newly created {@code AbstractSafeEnumChar}
+     * Initializes a newly created {@code SetChar}
      * object so that it represents the same value
      * as the argument.
      * <p>
@@ -31,7 +31,7 @@ public abstract class AbstractSafeSetChar extends AbstractSafeDataType<String> {
      * @param value A {@code String}.
      * @throws TypeValidationException if the validation fails.
      */
-    protected AbstractSafeSetChar(String value) throws TypeValidationException {
+    protected SetChar(String value) throws TypeValidationException {
         super(value);
     }
 

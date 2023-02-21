@@ -21,7 +21,7 @@ import org.owasp.safetypes.exception.TypeValidationException;
  *
  * @author todorolev
  */
-public class Integer0To100 extends AbstractSafeLimitedInteger {
+public class Integer0To100 extends LimitedInteger {
 
     /**
      * Initializes a newly created {@code Integer0To100} object so
@@ -55,7 +55,7 @@ public class Integer0To100 extends AbstractSafeLimitedInteger {
      * @return 0.
      */
     @Override
-    protected final Integer low() {
+    protected final Integer min() {
         return 0;
     }
 
@@ -64,7 +64,7 @@ public class Integer0To100 extends AbstractSafeLimitedInteger {
      * @return 100.
      */
     @Override
-    protected final Integer high() {
+    protected final Integer max() {
         return 100;
     }
 }

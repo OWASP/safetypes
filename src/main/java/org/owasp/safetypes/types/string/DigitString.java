@@ -1,6 +1,6 @@
 package org.owasp.safetypes.types.string;
 
-import org.owasp.safetypes.AbstractSafeDataType;
+import org.owasp.safetypes.SafeType;
 import org.owasp.safetypes.exception.TypeValidationException;
 
 /**
@@ -26,7 +26,7 @@ import org.owasp.safetypes.exception.TypeValidationException;
  *
  * @author todorolev
  */
-public class DigitString extends AbstractSafeDataType<String> {
+public class DigitString extends SafeType<String> {
 
     /**
      * Initializes a newly created {@code DigitString} object so that it

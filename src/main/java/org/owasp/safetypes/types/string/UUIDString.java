@@ -1,6 +1,6 @@
 package org.owasp.safetypes.types.string;
 
-import org.owasp.safetypes.AbstractSafeDataType;
+import org.owasp.safetypes.SafeType;
 import org.owasp.safetypes.exception.TypeValidationException;
 
 import java.util.UUID;
@@ -28,7 +28,7 @@ import java.util.UUID;
  *
  * @author todorolev
  */
-public class UUIDString extends AbstractSafeDataType<String> {
+public class UUIDString extends SafeType<String> {
 
     /**
      * Initializes a newly created {@code UUIDString} object so that it

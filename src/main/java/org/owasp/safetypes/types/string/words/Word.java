@@ -1,11 +1,10 @@
-package org.owasp.safetypes.types.string;
+package org.owasp.safetypes.types.string.words;
 
 import org.owasp.safetypes.exception.TypeValidationException;
 
 /**
  * The {@code Word} class represents a special type of {@code String},
- * containing only letters and limited to {@code Integer.MAX_VALUE}
- * in length.
+ * containing only letters and having length limited to {@code Integer.MAX_VALUE}.
  * <p>
  * Example:
  * <pre><code>
@@ -26,11 +25,11 @@ import org.owasp.safetypes.exception.TypeValidationException;
  *
  * @author todorolev
  */
-public class Word extends AbstractSafeLimitedString {
+public class Word extends BoundedWord {
 
     /**
-     * Initializes a newly created {@code Word} object so that it
-     * represents the same value as the argument.
+     * Initializes a newly created {@code Word} object
+     * so that it represents the same value as the argument.
      *
      * @param value A {@code String}.
      * @throws TypeValidationException if the validation fails.
@@ -40,33 +39,22 @@ public class Word extends AbstractSafeLimitedString {
     }
 
     /**
-     * Validates that the {@code String value} contains only letters.
-     * <p>
-     * The {@code String value} can be {@code null}.
-     *
-     * @param value A {@code String}.
-     * @throws TypeValidationException if the validation fails.
-     */
-    @Override
-    protected final void validate(String value) throws TypeValidationException {
-        if(value == null)
-            return;
-
-        for (int i=0; i<value.length(); i++) {
-            char c = value.charAt(i);
-            if (Character.isLetter(c))
-                continue;
-            throw new TypeValidationException();
-        }
-    }
-
-    /**
-     * Returns null, which makes the length limit equal to {@code Integer.MAX_VALUE}.
+     * Returns null, which makes the min length equal to 0.
      *
      * @return null.
      */
     @Override
-    protected Integer limit() {
+    protected Integer min() {
+        return null;
+    }
+
+    /**
+     * Returns null, which makes the max length equal to {@code Integer.MAX_VALUE}.
+     *
+     * @return null.
+     */
+    @Override
+    protected Integer max() {
         return null;
     }
 }
