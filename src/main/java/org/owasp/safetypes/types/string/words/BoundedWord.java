@@ -1,10 +1,10 @@
 package org.owasp.safetypes.types.string.words;
 
 import org.owasp.safetypes.exception.TypeValidationException;
-import org.owasp.safetypes.types.string.AbstractSafeBoundedString;
+import org.owasp.safetypes.types.string.BoundedString;
 
 /**
- * The {@code AbstractSafeWord} class represents
+ * The {@code BoundedWord} class represents
  * a special type of {@code String}, containing
  * only letters and with bounded length.
  * <p>
@@ -27,16 +27,16 @@ import org.owasp.safetypes.types.string.AbstractSafeBoundedString;
  *
  * @author todorolev
  */
-public abstract class AbstractSafeWord extends AbstractSafeBoundedString {
+public abstract class BoundedWord extends BoundedString {
 
     /**
-     * Initializes a newly created {@code AbstractSafeWord} object
+     * Initializes a newly created {@code BoundedWord} object
      * so that it represents the same value as the argument.
      *
      * @param value A {@code String}.
      * @throws TypeValidationException if the validation fails.
      */
-    protected AbstractSafeWord(String value) throws TypeValidationException {
+    protected BoundedWord(String value) throws TypeValidationException {
         super(value);
     }
 

@@ -1,7 +1,7 @@
 package org.owasp.safetypes.types.string.geodata.country;
 
 import org.owasp.safetypes.exception.TypeValidationException;
-import org.owasp.safetypes.types.string.AbstractSafeSetStringIgnoreCase;
+import org.owasp.safetypes.types.string.SetStringIgnoreCase;
 
 import java.util.Set;
 
@@ -24,7 +24,7 @@ import java.util.Set;
  *
  * @author todorolev
  */
-public class Country extends AbstractSafeSetStringIgnoreCase {
+public class Country extends SetStringIgnoreCase {
 
     /**
      * Initializes a newly created {@code Country} object so that it

@@ -1,7 +1,7 @@
 package org.owasp.safetypes.types.string.language;
 
 import org.owasp.safetypes.exception.TypeValidationException;
-import org.owasp.safetypes.types.string.AbstractSafeSetStringIgnoreCase;
+import org.owasp.safetypes.types.string.SetStringIgnoreCase;
 
 import java.util.Set;
 
@@ -24,7 +24,7 @@ import java.util.Set;
  *
  * @author todorolev
  */
-public class Language extends AbstractSafeSetStringIgnoreCase {
+public class Language extends SetStringIgnoreCase {
 
     /**
      * Initializes a newly created {@code Language} object so that

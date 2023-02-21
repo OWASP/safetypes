@@ -21,7 +21,7 @@ import org.owasp.safetypes.exception.TypeValidationException;
  *
  * @author todorolev
  */
-public class Digit extends AbstractSafeLimitedInteger {
+public class Digit extends LimitedInteger {
 
     /**
      * Initializes a newly created {@code Digit} object so that it

@@ -1,10 +1,10 @@
 package org.owasp.safetypes.types.integer;
 
-import org.owasp.safetypes.AbstractSafeBoundedDataType;
+import org.owasp.safetypes.BoundedType;
 import org.owasp.safetypes.exception.TypeValidationException;
 
 /**
- * The {@code AbstractSafeLimitedInteger} class represents a special
+ * The {@code LimitedInteger} class represents a special
  * type of {@code Integer}, which has a value between a low limit
  * and a high limit.
  * <p>
@@ -19,10 +19,10 @@ import org.owasp.safetypes.exception.TypeValidationException;
  *
  * @author todorolev
  */
-public abstract class AbstractSafeLimitedInteger extends AbstractSafeBoundedDataType<Integer> {
+public abstract class LimitedInteger extends BoundedType<Integer> {
 
     /**
-     * Initializes a newly created {@code AbstractSafeLimitedInteger}
+     * Initializes a newly created {@code LimitedInteger}
      * object so that it represents the same value as the argument.
      * <p>
      * The {@code Integer value} can be {@code null}.
@@ -30,7 +30,7 @@ public abstract class AbstractSafeLimitedInteger extends AbstractSafeBoundedData
      * @param value An {@code Integer}.
      * @throws TypeValidationException if the validation fails.
      */
-    protected AbstractSafeLimitedInteger(Integer value) throws TypeValidationException {
+    protected LimitedInteger(Integer value) throws TypeValidationException {
         super(value);
     }
 

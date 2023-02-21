@@ -1,28 +1,27 @@
 package org.owasp.safetypes.types.string;
 
-import org.owasp.safetypes.AbstractSafeDataType;
+import org.owasp.safetypes.SafeType;
 import org.owasp.safetypes.exception.TypeValidationException;
 
 import java.util.Set;
 
 /**
- * The {@code AbstractSafeEnumStringIgnoreCase} class represents
+ * The {@code SetString} class represents
  * a special type of {@code String} containing a well-defined and
- * case-insensitive set of values, like country codes, state codes,
- * language codes, etc.
+ * case-sensitive set of values, like Country names, State names, etc.
  * <p>
- * Each subclass defines the set of acceptable
- * values by implementing the abstract {@code strings()} method.
+ * Each subclass defines the set of acceptable values by
+ * implementing the abstract {@code strings()} method.
  * <p>
  * If {@code strings()} returns {@code null}, every
- * {@code String} value is acceptable and passes the validation.
+ * {@code String} value is acceptable.
  *
  * @author todorolev
  */
-public abstract class AbstractSafeSetStringIgnoreCase extends AbstractSafeDataType<String> {
+public abstract class SetString extends SafeType<String> {
 
     /**
-     * Initializes a newly created {@code AbstractSafeEnumStringIgnoreCase}
+     * Initializes a newly created {@code SetString}
      * object so that it represents the same value as the argument.
      * <p>
      * The {@code String value} can be {@code null}.
@@ -30,7 +29,7 @@ public abstract class AbstractSafeSetStringIgnoreCase extends AbstractSafeDataTy
      * @param value A {@code String}.
      * @throws TypeValidationException if the validation fails.
      */
-    protected AbstractSafeSetStringIgnoreCase(String value) throws TypeValidationException {
+    protected SetString(String value) throws TypeValidationException {
         super(value);
     }
 
@@ -50,7 +49,7 @@ public abstract class AbstractSafeSetStringIgnoreCase extends AbstractSafeDataTy
 
         final Set<String> strings = strings();
 
-        if(strings.stream().anyMatch(value::equalsIgnoreCase))
+        if (strings == null || strings.contains(value))
             return;
 
         throw new TypeValidationException();
@@ -66,4 +65,3 @@ public abstract class AbstractSafeSetStringIgnoreCase extends AbstractSafeDataTy
      */
     protected abstract Set<String> strings();
 }
-

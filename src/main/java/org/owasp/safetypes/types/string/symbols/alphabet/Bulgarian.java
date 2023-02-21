@@ -1,7 +1,7 @@
 package org.owasp.safetypes.types.string.symbols.alphabet;
 
 import org.owasp.safetypes.exception.TypeValidationException;
-import org.owasp.safetypes.types.string.AbstractSafeSetChar;
+import org.owasp.safetypes.types.string.SetChar;
 
 import java.util.Set;
 
@@ -24,7 +24,7 @@ import java.util.Set;
  *
  * @author todorolev
  */
-public class Bulgarian extends AbstractSafeSetChar {
+public class Bulgarian extends SetChar {
 
     /**
      * Initializes a newly created {@code Bulgarian} object so that

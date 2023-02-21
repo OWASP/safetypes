@@ -21,7 +21,7 @@ import org.owasp.safetypes.exception.TypeValidationException;
  *
  * @author todorolev
  */
-public class Integer0To3 extends AbstractSafeLimitedInteger {
+public class Integer0To3 extends LimitedInteger {
 
     /**
      * Initializes a newly created {@code Integer0To3} object so

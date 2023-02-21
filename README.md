@@ -32,7 +32,7 @@ incorrect or unexpected will lead to a Bad Request response.
 
 ## Extensibility
 The library contains useful classes ready to be used, but it is also easily extensible for customisation.
-Every special class in the library is in a hierarchy extending AbstractSafeType.java. This abstract class has
+Every special class in the library is in a hierarchy extending SafeType.java. This abstract class has
 two methods:
 
 ```

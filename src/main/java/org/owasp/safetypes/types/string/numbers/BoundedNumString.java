@@ -1,10 +1,10 @@
 package org.owasp.safetypes.types.string.numbers;
 
 import org.owasp.safetypes.exception.TypeValidationException;
-import org.owasp.safetypes.types.string.AbstractSafeBoundedString;
+import org.owasp.safetypes.types.string.BoundedString;
 
 /**
- * The {@code AbstractSafeNumString} class represents
+ * The {@code BoundedNumString} class represents
  * a special type of {@code String}, containing only digits
  * and with bounded length.
  * <p>
@@ -18,16 +18,16 @@ import org.owasp.safetypes.types.string.AbstractSafeBoundedString;
  *
  * @author todorolev
  */
-public abstract class AbstractSafeNumString extends AbstractSafeBoundedString {
+public abstract class BoundedNumString extends BoundedString {
 
     /**
-     * Initializes a newly created {@code AbstractSafeNumString} object
+     * Initializes a newly created {@code BoundedNumString} object
      * so that it represents the same value as the argument.
      *
      * @param value A {@code String}.
      * @throws TypeValidationException if the validation fails.
      */
-    protected AbstractSafeNumString(String value) throws TypeValidationException {
+    protected BoundedNumString(String value) throws TypeValidationException {
         super(value);
     }
 

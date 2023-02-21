@@ -1,10 +1,10 @@
 package org.owasp.safetypes.types.string;
 
-import org.owasp.safetypes.AbstractSafeBoundedDataType;
+import org.owasp.safetypes.BoundedType;
 import org.owasp.safetypes.exception.TypeValidationException;
 
 /**
- * The {@code AbstractSafeBoundedString} class represents a special
+ * The {@code BoundedString} class represents a special
  * type of {@code String} with bounded length.
  * <p>
  * Each subclass defines the length boundaries by implementing
@@ -17,16 +17,16 @@ import org.owasp.safetypes.exception.TypeValidationException;
  *
  * @author todorolev
  */
-public abstract class AbstractSafeBoundedString extends AbstractSafeBoundedDataType<String> {
+public abstract class BoundedString extends BoundedType<String> {
 
     /**
-     * Initializes a newly created {@code AbstractSafeBoundedString}
+     * Initializes a newly created {@code BoundedString}
      * object so that it represents the same value as the argument.
      *
      * @param value A {@code String}.
      * @throws TypeValidationException if the validation fails.
      */
-    protected AbstractSafeBoundedString(String value) throws TypeValidationException {
+    protected BoundedString(String value) throws TypeValidationException {
         super(value);
     }
 

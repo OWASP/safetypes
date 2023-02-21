@@ -3,7 +3,7 @@ package org.owasp.safetypes;
 import org.owasp.safetypes.exception.TypeValidationException;
 
 /**
- * The {@code AbstractSafeBoundedDataType} class determines
+ * The {@code BoundedType} class determines
  * a unified way of setting min and max {@code Integer} boundaries,
  * where such are applicable.
  * <p>
@@ -14,16 +14,16 @@ import org.owasp.safetypes.exception.TypeValidationException;
  *
  * @author todorolev
  */
-public abstract class AbstractSafeBoundedDataType<T> extends AbstractSafeDataType<T> {
+public abstract class BoundedType<T> extends SafeType<T> {
 
     /**
-     * Initializes a newly created {@code AbstractSafeBoundedDataType} object
+     * Initializes a newly created {@code BoundedType} object
      * so that it represents the same value as the argument.
      *
      * @param value A value to be validated.
      * @throws TypeValidationException if the validation fails.
      */
-    protected AbstractSafeBoundedDataType(T value) throws TypeValidationException {
+    protected BoundedType(T value) throws TypeValidationException {
         super(value);
     }
 

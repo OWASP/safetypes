@@ -1,6 +1,6 @@
 package org.owasp.safetypes.types.string;
 
-import org.owasp.safetypes.AbstractSafeDataType;
+import org.owasp.safetypes.SafeType;
 import org.owasp.safetypes.exception.TypeValidationException;
 
 /**
@@ -26,7 +26,7 @@ import org.owasp.safetypes.exception.TypeValidationException;
  *
  * @author todorolev
  */
-public class Letter extends AbstractSafeDataType<String> {
+public class Letter extends SafeType<String> {
 
     /**
      * Initializes a newly created {@code Letter} object so that it

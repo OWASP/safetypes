@@ -23,7 +23,7 @@ import org.owasp.safetypes.exception.TypeValidationException;
  * that it allows only for up to 10 digits, e.g. "123", "0123456789", etc.
  * and it throws an exception for everything else, e.g. "xyz", "a1", "12345678910", etc.
  */
-public class NumString0To10 extends AbstractSafeNumString {
+public class NumString0To10 extends BoundedNumString {
 
     /**
      * Initializes a newly created {@code NumString0To10} object so that it

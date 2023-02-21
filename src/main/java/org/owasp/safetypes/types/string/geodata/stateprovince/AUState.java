@@ -1,7 +1,7 @@
 package org.owasp.safetypes.types.string.geodata.stateprovince;
 
 import org.owasp.safetypes.exception.TypeValidationException;
-import org.owasp.safetypes.types.string.AbstractSafeSetStringIgnoreCase;
+import org.owasp.safetypes.types.string.SetStringIgnoreCase;
 
 import java.util.Set;
 
@@ -24,7 +24,7 @@ import java.util.Set;
  *
  * @author todorolev
  */
-public class AUState extends AbstractSafeSetStringIgnoreCase {
+public class AUState extends SetStringIgnoreCase {
 
     /**
      * Initializes a newly created {@code AUState} object so that

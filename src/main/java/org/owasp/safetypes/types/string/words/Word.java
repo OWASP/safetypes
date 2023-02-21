@@ -25,7 +25,7 @@ import org.owasp.safetypes.exception.TypeValidationException;
  *
  * @author todorolev
  */
-public class Word extends AbstractSafeWord {
+public class Word extends BoundedWord {
 
     /**
      * Initializes a newly created {@code Word} object

@@ -1,5 +1,6 @@
 package org.owasp.safetypes.types.string.numbers;
 
+import org.owasp.safetypes.SafeType;
 import org.owasp.safetypes.exception.TypeValidationException;
 
 /**
@@ -23,7 +24,7 @@ import org.owasp.safetypes.exception.TypeValidationException;
  * that it allows only for digits, e.g. "123", "007", etc. and it throws
  * an exception for everything else, e.g. "xyz", "a1", "1x2", etc.
  */
-public class NumString extends AbstractSafeNumString {
+public class NumString extends BoundedNumString {
     /**
      * Initializes a newly created {@code NumString} object so that it
      * represents the same value as the argument.

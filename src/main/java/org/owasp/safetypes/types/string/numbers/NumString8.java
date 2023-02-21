@@ -24,7 +24,7 @@ import org.owasp.safetypes.exception.TypeValidationException;
  * and it throws an exception for everything else,
  * e.g. "1234567", "123456789", "abcdefgh", "a1234567", etc.
  */
-public class NumString8 extends AbstractSafeNumString {
+public class NumString8 extends BoundedNumString {
     /**
      * Initializes a newly created {@code NumString8} object so that it
      * represents the same value as the argument.

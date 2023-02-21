@@ -23,7 +23,7 @@ import org.owasp.safetypes.exception.TypeValidationException;
  * it allows only for 6 digits, e.g. "1234567", "0000000", "0000007", etc. and it throws
  * an exception for everything else, e.g. "123456", "12345678", "abcdefg", "a123456", etc.
  */
-public class NumString7 extends AbstractSafeNumString {
+public class NumString7 extends BoundedNumString {
     /**
      * Initializes a newly created {@code NumString7} object so that it
      * represents the same value as the argument.
